@@ -1,0 +1,79 @@
+<template name="newbill">
+  <header>
+      <div class="container">
+          <div class="intro-text">
+            <h1>New Bill</h1>
+          </div>
+      </div>
+  </header>
+
+  <section id="new-bill">
+    <div class="container">
+
+      {{{ alertbox }}}
+
+      <form id="newbill">
+        <div class="form-group">
+          <label for="denomination">Denomination</label>
+          <select id="denomination" name="dx" size="1" class="large_blue"><option value="1" selected="">$1</option>
+            <option value="2">$2</option>
+            <option value="5">$5</option>
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="50">$50</option>
+            <option value="100">$100</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sx">Bill Series</label>
+          <select id="sx" name="sx" size="1" class="large_blue">
+            <option value="Select">Select</option><option value="2013">2013</option>
+            <option value="2009">2009</option>
+            <option value="2006">2006</option>
+            <option value="2003A">2003A</option>
+            <option value="2003">2003</option>
+            <option value="2001">2001</option>
+            <option value="1999">1999</option>
+            <option value="1995">1995</option>
+            <option value="1993">1993</option>
+            <option value="1988">1988</option>
+            <option value="1988A">1988A</option>
+            <option value="1985">1985</option>
+            <option value="1981">1981</option>
+            <option value="1981A">1981A</option>
+            <option value="1977">1977</option>
+            <option value="1977A">1977A</option>
+            <option value="1974">1974</option>
+            <option value="1969">1969</option>
+            <option value="1969A">1969A</option>
+            <option value="1969B">1969B</option>
+            <option value="1969C">1969C</option>
+            <option value="1969D">1969D</option>
+            <option value="1963A">1963A</option>
+            <option value="1963B">1963B</option>
+            <option value="1963">1963</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="serialnumber">Serial Number</label>
+          <input type="text" class="form-control" id="serialnumber" name="serialnumber" placeholder="Serial #">
+        </div>
+        <div class="form-group">
+          <label for="zip">Current Zip Code</label>
+          <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip">
+        </div>
+
+
+        <div class="checkbox">
+          <label>
+            <input name="have" type="checkbox"> Do you have the bill now?
+          </label>
+        </div>
+        <textarea class="form-control" name="note" rows="3"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+</template>

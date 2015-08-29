@@ -1,0 +1,30 @@
+<template name="mybilltable">
+  <div class="table-responsive">
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Denomination</th>
+        <th>Serial</th>
+        <th>Registered</th>
+        <th>Location</th>
+        <th>Details</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{#each bill}}
+        {{>mybilltablerow}}
+      {{/each}}
+
+
+
+    </tbody>
+    </table>
+  </div>
+{{{ nobills }}}
+
+
+
+
+
+</template>

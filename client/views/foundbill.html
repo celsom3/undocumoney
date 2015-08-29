@@ -1,0 +1,35 @@
+<template name="foundbill">
+  <header>
+      <div class="container">
+          <div class="intro-text">
+            <h1>Found Bill</h1>
+          </div>
+      </div>
+  </header>
+
+  <section id="found-bill">
+    <div class="container">
+      {{{ alertbox }}}
+      <form>
+        <div class="form-group">
+          <label for="serialnumber">Serial Number</label>
+          <input name="serialnumber" type="text" class="form-control" id="serialnumber" placeholder="Serial #">
+        </div>
+        <div class="form-group">
+          <label for="zip">Zip Code</label>
+          <input name="zip" type="text" class="form-control" id="zip" placeholder="Zip">
+        </div>
+
+
+        <div class="checkbox">
+          <label>
+            <input name="have" type="checkbox"> Do you have the bill now?
+          </label>
+        </div>
+        <textarea class="form-control" name="note" placeholder="Note..." rows="3"></textarea>
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </section>
+</template>

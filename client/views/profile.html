@@ -1,0 +1,32 @@
+<template name="profile">
+  <header>
+      <div class="container">
+          <div class="intro-text">
+
+              <div class="intro-lead-in">Welcome To Your Profile!</div>
+              <div class="intro-heading">Choose:</div>
+              <a href="{{ pathFor 'foundbill'}}" class="tell-more page-scroll btn btn-xl">Record Found Bill</a>
+              <a href="{{ pathFor 'newbill'}}" class="tell-more page-scroll btn btn-xl">Register New Bill</a>
+          </div>
+      </div>
+  </header>
+
+  <section class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <h3 class="text-center">Bills I've Registered</h3>
+      </div>
+      <div class="row">
+        {{ >mybilltable }}
+      </div>
+
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Bill I've Found</h3>
+    </div>
+  </section>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</template>

@@ -1,0 +1,53 @@
+<template name='mybilltablerow'>
+  <tr>
+    <td>{{ denomination }}</td>
+    <td>{{ serial }}</td>
+    <td scope="row">{{ entrytime }}</td>
+    <td>{{ location }}</td>
+    <td><a href="#{{serial}}" class="portfolio-link" data-toggle="modal">View</a></td>
+
+  </tr>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal modal fade" id="{{serial}}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                  <div class="rl">
+                  </div>
+              </div>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
+                      <div class="modal-body">
+                          <!-- Project Details Go Here -->
+                          <h2>${{ denomination}} bill, Serial: {{ serial }}</h2>
+                          <p class="item-intro text-muted">Registered: {{ entrytime }}</p>
+
+
+                          <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Time Recorded</th>
+                              <th>Zip</th>
+                              <th>Note</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {{#each billhistory}}
+                              {{>mybillhistory}}
+                            {{/each}}
+
+                          </tbody>
+                        </table>
+
+                          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>
