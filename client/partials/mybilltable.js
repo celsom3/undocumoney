@@ -1,3 +1,7 @@
+Template.mybilltable.created = function(){
+  Session.set('message', '');
+};
+
 Template.mybilltable.helpers({
   onReady: function(){
     //Meteor.subscribe("mybills");
@@ -10,7 +14,8 @@ Template.mybilltable.helpers({
   nobills: function(){
     var thebills = bills.find({ registeredby: Meteor.userId() }).fetch();
     if (thebills.length === 0){
-      return '<div class="no-data alert alert-danger">No data found! <a href="{{ pathFor "newbill" }}">Register your first bill!</a></div>';
+      Session.set('<div class="no-data alert alert-danger">No data found! <a href="{{ pathFor "newbill" }}">Register your first bill!</a></div>');
+      return Session.get('message');
     }
 
   }
