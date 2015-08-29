@@ -23,7 +23,7 @@ Template.newbill.events({
      var note = e.target.note.value;
      var email = Meteor.user().emails[0].address;
 
-     if(bills.find({serial : serial})){
+     if(bills.find({serial : serial}).fetch().length > 0){
        Session.set('newbillmessage', '<div class="no-data alert alert-danger">This bill is already registered. <a href="/found-bill">Record it as found here!</a></div>');
      }else{
 
@@ -46,7 +46,7 @@ Template.newbill.events({
        e.target.note.value = '';
        e.target.have.checked = false;
 
-       Session.set('newbillmessage', '<div class="no-data alert alert-success">You just registered a bill!</div>');
+       Session.set('newbillmessage', '<div class="no-data alert alert-success">You just registered a bill! <a href="/profile">Go to Profile.</a> or submit a new bill below.</div>');
      }
 
 

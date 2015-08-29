@@ -26,7 +26,7 @@ Template.foundbilltable.helpers({
         registeredby: { $ne : Meteor.userId() }
       }).fetch();
     if (thebills.length === 0){
-      Session.set('foundtablemessage', '<div class="no-data alert alert-danger">You haven\'t registered any bills. <a href="/found-bill" }}">Record your first found bill!</a></div>');
+      Session.set('foundtablemessage', '<div class="no-data alert alert-danger">You haven\'t recorded any bills. <a href="/found-bill" }}">Record your first found bill!</a></div>');
       return Session.get('foundtablemessage');
     }
 
