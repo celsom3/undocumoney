@@ -723,6 +723,7 @@ section#contact .text-danger {
 footer {
     padding: 25px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 footer span.copyright {
@@ -975,4 +976,19 @@ body {
 .no-data{
   text-align: center;
   width: 100%;
+}
+
+#sticky-bar{
+  width: 100%;
+  height: auto;
+  position: fixed!important;
+  display: block;
+  bottom: 0px;
+  z-index: 10000;
+  background: black;
+  color:white;
+}
+
+#sticky-bar .sticky-option{
+  margin: 5px 10px;
 }

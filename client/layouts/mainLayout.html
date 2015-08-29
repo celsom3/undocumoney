@@ -1,4 +1,16 @@
 <template name="frontEndLayout">
+  <!-- Sticky header -->
+  <div id="sticky-bar">
+    <div class="col-md-6 text-center">
+      <a class="btn btn-xs btn-primary sticky-option" href="{{ pathFor 'foundbill'}}">I Found #Undocumoney</a>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <a class="btn btn-xs btn-primary sticky-option" href="{{ pathFor 'newbill'}}">I want to Register #Undocumoney</a>
+    </div>
+
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
