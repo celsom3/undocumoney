@@ -9,13 +9,14 @@ Template.foundbill.events({
 
 
      var serial = e.target.serialnumber.value;
+     serial = serial.toLowerCase();
      var zip = e.target.zip.value;
      var have = e.target.have.checked;
      var note = e.target.note.value;
      var email = Meteor.user().emails[0].address;
 
 
-     var thisbill = bills.findOne({"serial": serial});
+     var thisbill = bills.findOne({serial: serial});
 
      // check to see if this bill exists
      if (thisbill){
