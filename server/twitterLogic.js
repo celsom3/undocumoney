@@ -22,6 +22,15 @@ Meteor.startup(function(){
 
           // for (each tweet && counter<=4)
           for ( var i = 0; foundImages < 4; i++){
+            // Check to see if status already exists in collection
+            var already_have = false;
+
+            for (b = 0; b < tweets.find().fetch().length; b++){
+              if(tweets.find().fetch()[b].statusText === data.statuses[i].text){
+                already_have = true;
+              }
+            }
+
             // If tweet has image
             if(data.statuses[i].entities.media){
               // Get all needed tweet info and add to tweet array

@@ -3,10 +3,9 @@ Template.home.helpers({
 
   },
   latesttweets: function(){
-    // var response = Meteor.call('getLatestTweets');
-    // var tweets = response.statuses;
-    // console.log(Session.get('thetweets'));
-    // return Session.get('thetweets');
-    return tweets.find({}, {'sort' : ['timestamp', 'asc']});
+    return tweets.find({}, {
+      'sort' : ['timestamp', 'asc'],
+      'limit': 4
+    });
   }
 });

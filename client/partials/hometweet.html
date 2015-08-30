@@ -1,16 +1,43 @@
 <template name="hometweet">
   <div class="col-md-6 col-sm-6 portfolio-item">
-      <a href="#" class="portfolio-link" data-toggle="modal">
+      <a href="#{{ screenName }}" class="portfolio-link" data-toggle="modal">
           <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
               </div>
           </div>
-          <img src="img/stories/01-preview.jpg" class="img-responsive" alt="">
+          <img src="{{ imageUrl }}" height="200" class="img-responsive" alt="{{statusText}}">
       </a>
       <div class="portfolio-caption">
-          <h4>Juan Doe</h4>
-          <p class="text-muted">City, State</p>
+          <h4>@{{ screenName }}</h4>
+
       </div>
   </div>
+
+
+  <div style="z-index: 40000;" class="portfolio-modal modal fade" id="{{ screenName }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                  <div class="rl">
+                  </div>
+              </div>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
+                      <div class="modal-body">
+                          <!-- Project Details Go Here -->
+                          <h2>@{{ screenName }}</h2>
+                          <p class="item-intro text-muted">{{statusText}}</p>
+
+                          <img src="{{ imageUrl }}" height="200" class="img-responsive img-centered" alt="{{statusText}}">
+
+                          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
 </template>
