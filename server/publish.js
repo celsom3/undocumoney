@@ -1,6 +1,4 @@
 Meteor.publish("mybills", function(){
-  var currentUser = Meteor.users.findOne(this.userId);
-  
   return bills.find({'registeredby': this.userId});
 });
 

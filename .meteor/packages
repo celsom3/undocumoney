@@ -13,3 +13,5 @@ jquery
 iron:router
 accounts-ui
 reactive-var
+mrt:twit
+okgrow:iron-router-autoscroll
