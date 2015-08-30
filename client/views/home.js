@@ -2,9 +2,11 @@ Template.home.helpers({
   rendered: function(){
 
   },
-  latestTweets: function(){
-    return Twit.get('search/tweets', { q: '#undocumoney since:2015-08-27', count: 4 }, function(err, data, response) {
-      console.log(data);
-    });
+  latesttweets: function(){
+    // var response = Meteor.call('getLatestTweets');
+    // var tweets = response.statuses;
+    // console.log(Session.get('thetweets'));
+    // return Session.get('thetweets');
+    return tweets.find({}, {'sort' : ['timestamp', 'asc']});
   }
 });
