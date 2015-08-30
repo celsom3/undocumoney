@@ -1,12 +1,13 @@
 <template name="hometweet">
-  <div class="col-md-6 col-sm-6 portfolio-item">
-      <a href="#{{ screenName }}" class="portfolio-link" data-toggle="modal">
+  <div class="col-md-6 col-sm-6 portfolio-item" style="min-heigth: 150px!important;overflow:hidden;">
+      <a href="#{{ _id }}" class="portfolio-link" data-toggle="modal">
           <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
               </div>
           </div>
-          <img src="{{ imageUrl }}" height="200" class="img-responsive" alt="{{statusText}}">
+          <div style="width:100%;height:250px;background: url({{ imageUrl }});background-size:cover;background-position: center;background-repeat: no-repeat;"></div>
+          <!-- <img src="{{ imageUrl }}" class="" alt="{{statusText}}" style="width: 100%!important;"> -->
       </a>
       <div class="portfolio-caption">
           <h4>@{{ screenName }}</h4>
@@ -15,7 +16,7 @@
   </div>
 
 
-  <div style="z-index: 40000;" class="portfolio-modal modal fade" id="{{ screenName }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div style="z-index: 40000;" class="portfolio-modal modal fade" id="{{ _id }}" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
               <div class="lr">

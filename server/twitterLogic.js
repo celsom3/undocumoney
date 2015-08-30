@@ -21,12 +21,13 @@ Meteor.startup(function(){
           var foundImages = 0;
 
           // for (each tweet && counter<=4)
-          for ( var i = 0; foundImages < 4; i++){
+          for ( var i = 0; foundImages < 10; i++){
             // Check to see if status already exists in collection
             var already_have = false;
 
+
             for (b = 0; b < tweets.find().fetch().length; b++){
-              if(tweets.find().fetch()[b].statusText === data.statuses[i].text){
+              if(tweets.find().fetch()[b].statusText === statusText){
                 already_have = true;
               }
             }
