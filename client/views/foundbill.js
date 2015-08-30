@@ -16,7 +16,7 @@ Template.foundbill.events({
      var email = Meteor.user().emails[0].address;
 
 
-     var thisbill = bills.findOne({'serial': serial.toLowerCase()});
+     var thisbill = bills.findOne({serial: serial.toLowerCase()});
 
      // check to see if this bill exists
      if (thisbill){

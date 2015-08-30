@@ -1,6 +1,6 @@
 Meteor.publish("mybills", function(){
   var currentUser = Meteor.users.findOne(this.userId);
-  useremail = currentUser.emails[0].address;
+  
   return bills.find({'registeredby': this.userId});
 });
 
