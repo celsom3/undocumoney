@@ -6,7 +6,6 @@ Meteor.publish("mybills", function(){
 
 Meteor.publish("allbills", function(argument){
   return bills.find({},{fields:{
-    denomination: false,
     series: false
 
   }});
