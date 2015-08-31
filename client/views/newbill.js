@@ -41,6 +41,13 @@ Template.newbill.events({
 
        });
 
+       // Now tweet out the good news.
+
+       var tweet_note = note.slice(0,45) + '...';
+
+       var tweet = tweet_note + ' New #undocumoney registered at Zip Code ' + zip + '. Register your own at http://undocumoney.com!'
+       Meteor.call('tweet_out', tweet);
+
        e.target.serialnumber.value = '';
        e.target.zip.value = '';
        e.target.note.value = '';

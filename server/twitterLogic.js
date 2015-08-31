@@ -90,7 +90,18 @@ Meteor.startup(function(){
       this.unblock();
       tweets.insert(tweet);
 
-    }
+    },
+    'tweet_out': function(tweet){
+      T.post('statuses/update', { status: tweet }, function(err, data, response) {
+        if(!err){
+          console.log(data);
+        }else{
+          console.log(err);
+        }
+      });
+
+
+    } // end of 'tweet_out'
   });
 
 });

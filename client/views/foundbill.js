@@ -33,6 +33,13 @@ Template.foundbill.events({
        }
       });
 
+      // Now tweet out the good news.
+
+      var tweet_note = note.slice(0,55) + '...';
+
+      var tweet = tweet_note + ' Found at Zip Code ' + zip + '. Register your #undocumoney at http://undocumoney.com!'
+      Meteor.call('tweet_out', tweet);
+
 
       e.target.serialnumber.value = '';
       e.target.zip.value = '';
@@ -43,6 +50,7 @@ Template.foundbill.events({
     }else{
       Session.set('message', '<div class="no-data alert alert-danger">Couldn\'t find this bill in our records. <a href="/new-bill">Register it as new here!</a></div>');
     }
+
 
 
 
