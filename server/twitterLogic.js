@@ -1,66 +1,61 @@
 Meteor.startup(function(){
   Meteor.methods({
     'getLatestTweets': function(){
-      var cleanTweets = T.get('search/tweets', { q: '#undocumoney since:2015-08-28', count: 1, f: 'images' }, Meteor.bindEnvironment(function(err, data, response) {
-        var statuses = data.statuses ? data.statuses : [];
-        //console.log(data);
-        if(!err && statuses.length !== 0){
-          console.log("Getting tweets...");
-          console.log(" ");
-          console.log(" ");
-          console.log(" ");
-          console.log(" ");
 
+
+      var cleanTweets = T.get('search/tweets', { q: '#undocumoney since:2015-08-27', count: 40, f: 'images' }, Meteor.bindEnvironment(function(err, data, response) {
+        if(!err){
+          console.log("Getting tweets...");
+          //console.log(response);
+          // var statusText = data.statuses[1].text;
+          // console.log(statusText);
+          //
+          // var imageUrl = data.statuses[1].entities.media[0].media_url;
+          // console.log(imageUrl);
+          //
+          // var screenName = data.statuses[1].user.screen_name;
+          // console.log(data.statuses[1].user.screen_name);
           var formattedTweets = [];
 
           // Initialize counter for tweets with images
           var foundImages = 0;
 
           // for (each tweet && counter<=4)
-          for ( var i = 0; foundImages < 20; i++){
+          for ( var i = 0; foundImages < 10; i++){
             // Check to see if status already exists in collection
             var already_have = false;
 
-            // var thisTweetId = statuses[i].id ? statuses[i].id : 0;
-            //
-            // for (b = 0; b < tweets.find().fetch().length; b++){
-            //   if(tweets.find().fetch()[b].id === thisTweetId){
-            //     already_have = true;
-            //     break;
-            //   }
-            // }
-            // console.log(statuses[i]);
-            // var thisTweetText = statuses[i].text;
-            //
-            // for (c = 0; c < tweets.find().fetch().length; c++){
-            //   if(tweets.find().fetch()[c].text === thisTweetText){
-            //     already_have = true;
-            //     break;
-            //   }
-            // }
 
-            console.log(statuses[i]);
+            for (b = 0; b < tweets.find().fetch().length; b++){
+              if(tweets.find().fetch()[b].statusText === data.statuses[i].text){
+                already_have = true;
+                break;
+              }
+            }
 
             // If tweet has image
-            if((statuses[i].entities !== undefined) && (statuses[i].entities.media !== undefined) && !already_have){
-              // Get all needed tweet info and add to tweet db
-              // Get the tweet ID
-              var tweetId = statuses[i].id;
+            if(!already_have){
+              // Get all needed tweet info and add to tweet array
 
-              var statusText = statuses[i].text;
+              // Get the tweetId
+              var tweetId = data.statuses[i].id_str;
+
+              var statusText = data.statuses[i].text;
               //console.log(statusText);
 
-              var imageUrl = statuses[i].entities.media[0].media_url;
+              // var imageUrl = data.statuses[i].entities.media[0].media_url;
+              var imageUrl = data.statuses[i].user.profile_image_url;
               //console.log(imageUrl);
+              imageUrl = imageUrl.replace('_normal', '');
 
-              var screenName = statuses[i].user.screen_name;
-              //console.log(statuses[i].user.screen_name);
+              var screenName = data.statuses[i].user.screen_name;
+              //console.log(data.statuses[i].user.screen_name);
 
 
               formattedTweets.push({
-                tweetId: tweetId,
+
                 statusText: statusText,
-                imageUrl: imageUrl,
+                //imageUrl: imageUrl,
                 screenName: screenName
               });
 
