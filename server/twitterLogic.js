@@ -3,7 +3,7 @@ Meteor.startup(function(){
     'getLatestTweets': function(){
 
 
-      var cleanTweets = T.get('search/tweets', { q: '#undocumoney since:2015-08-27', count: 40, f: 'images' }, Meteor.bindEnvironment(function(err, data, response) {
+      var cleanTweets = T.get('search/tweets', { q: '#undocumoney since:2015-08-27', count: 40, filter: 'images' }, Meteor.bindEnvironment(function(err, data, response) {
         if(!err){
           console.log("Getting tweets...");
           //console.log(response);
@@ -17,6 +17,8 @@ Meteor.startup(function(){
           // console.log(data.statuses[1].user.screen_name);
           var formattedTweets = [];
 
+          tweets.remove({});
+
           // Initialize counter for tweets with images
           var foundImages = 0;
 
@@ -27,7 +29,7 @@ Meteor.startup(function(){
 
 
             for (b = 0; b < tweets.find().fetch().length; b++){
-              if(tweets.find().fetch()[b].statusText === data.statuses[i].text){
+              if(tweets.find().fetch()[b].imageUrl === data.statuses[i].entities.media[0].media_url){
                 already_have = true;
                 break;
               }
@@ -43,10 +45,10 @@ Meteor.startup(function(){
               var statusText = data.statuses[i].text;
               //console.log(statusText);
 
-              // var imageUrl = data.statuses[i].entities.media[0].media_url;
-              var imageUrl = data.statuses[i].user.profile_image_url;
+              var imageUrl = data.statuses[i].entities.media[0].media_url;
+              //var imageUrl = data.statuses[i].user.profile_image_url;
               //console.log(imageUrl);
-              imageUrl = imageUrl.replace('_normal', '');
+              //imageUrl = imageUrl.replace('_normal', '');
 
               var screenName = data.statuses[i].user.screen_name;
               //console.log(data.statuses[i].user.screen_name);

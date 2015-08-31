@@ -5,8 +5,8 @@ Template.home.helpers({
   latesttweets: function(){
     Meteor.call('getLatestTweets');
     return tweets.find({}, {
-      'sort' : ['timestamp', 'asc']
-      ,'limit': 4
+      'sort' : ['timestamp', 'desc']
+      ,'limit': 8
     });
   }
 });
