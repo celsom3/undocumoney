@@ -27,16 +27,17 @@ That's it! You should now be able to see the site at localhost:3000.
 
 ## Contributing
 
-This repo is no longer used for active development. If you want to fork the most updated repo, contact me at celso@digitalstrategy.tips.
+If you want to help with the development of this website email celso@digitalstrategy.tips. There may be some specifc features in the pipeline that you can help out with. Or you can just fork, clean up my code and send a pull request. :-)
 
-#### Why would I do active development on private repo?
+## Future features
 
-It's mainly political. Considering this is a political project, I don't want too much of the source code out for anyone's perusal.
-
-## History
-
-TODO: Write history
+- Present the #undocumoney location history through interactive map
+- Allow people to upload media to go along with tweet
+- Create a tweet throttler so as not to overload the Twitter API from too many tweets
 
 ## Credits
 
-- Celso Mireles: celso@digitalstrategy.tips
+- Celso Mireles, Developer: celso@digitalstrategy.tips
+- Marisol Soto, Idea Person, Spokeswoman: marisolsoto11@yahoo.com
+- Irvin Camacho, Script Writer: Irvincamacho16@hotmail.com
+- Andrew Johnson, Videographer: venturestudios.ar@gmail.com
