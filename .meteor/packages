@@ -15,3 +15,7 @@ accounts-ui
 reactive-var
 mrt:twit
 okgrow:iron-router-autoscroll
+meteorhacks:kadira
+meteorhacks:kadira-profiler
+meteorhacks:zones
+okgrow:analytics

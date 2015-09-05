@@ -730,7 +730,13 @@ footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
+    line-height: 50px;
+}
+
+@media (max-width: 991px){
+  footer {
+    margin-bottom: 80px;
+  }
 }
 
 footer ul.quicklinks {

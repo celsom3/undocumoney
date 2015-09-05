@@ -15,28 +15,27 @@
 
 
       {{{ alertbox }}}
-      <form>
+      <form role="form" data-toggle="validator">
         <div class="form-group">
           <label for="serialnumber">Serial Number</label>
-          <input name="serialnumber" type="text" class="form-control" id="serialnumber" placeholder="Serial #">
+          <input name="serialnumber" type="text" pattern=".{8,13}" class="form-control" id="serialnumber" placeholder="Serial #" data-error="A serial number is required so we can check in the database." required>
+          <div class="help-block with-errors"></div>
         </div>
         <div class="form-group">
           <label for="zip">Zip Code</label>
-          <input name="zip" type="text" class="form-control" id="zip" placeholder="Zip">
+          <input name="zip" type="text" pattern="^\d{5}$" class="form-control" id="zip" placeholder="Zip" data-error="That does not look like a zip code..." required>
+          <div class="help-block with-errors"></div>
         </div>
 
 
-        <div class="checkbox">
-          <label>
-            <input name="have" type="checkbox"> Do you have the bill now?
-          </label>
-        </div>
+
         <div class="form-group">
-          <label for="note">How did you get this bill?</label>
-          <textarea class="form-control" name="note" placeholder="Got this at..." rows="3"></textarea>
+          <label for="note">How did you get this bill? <span>{{needchars}}</span></label>
+          <textarea class="form-control" pattern="^.{15}.+$" data-minlength="15" id="note" name="note" placeholder="Got this at..." rows="3" data-error="Tell us a quick note so we can keep a record and tweet it." required></textarea>
+          <div class="help-block with-errors"></div>
         </div>
         <br>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </section>

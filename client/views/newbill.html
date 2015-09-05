@@ -15,10 +15,11 @@
 
       {{{ alertbox }}}
 
-      <form id="newbill">
+      <form id="newbill" role="form" data-toggle="validator">
         <div class="form-group">
           <label for="denomination">Denomination</label>
-          <select id="denomination" name="dx" size="1" class="large_blue"><option value="1" selected="">$1</option>
+          <select id="denomination" name="dx" size="1">
+            <option value="1" selected="">$1</option>
             <option value="2">$2</option>
             <option value="5">$5</option>
             <option value="10">$10</option>
@@ -30,8 +31,9 @@
 
         <div class="form-group">
           <label for="sx">Bill Series</label>
-          <select id="sx" name="sx" size="1" class="large_blue">
-            <option value="Select">Select</option><option value="2013">2013</option>
+          <select id="sx" name="sx" size="1" data-error="Please select a data series.">
+            <option value="select">Select</option>
+            <option value="2013">2013</option>
             <option value="2009">2009</option>
             <option value="2006">2006</option>
             <option value="2003A">2003A</option>
@@ -57,25 +59,25 @@
             <option value="1963B">1963B</option>
             <option value="1963">1963</option>
           </select>
+          <div class="help-block with-errors"></div>
         </div>
         <div class="form-group">
           <label for="serialnumber">Serial Number</label>
-          <input type="text" class="form-control" id="serialnumber" name="serialnumber" placeholder="Serial #">
+          <input name="serialnumber" type="text" pattern=".{8,13}" class="form-control" id="serialnumber" placeholder="Serial #" data-error="A serial number is required so we can check in the database." required>
+          <div class="help-block with-errors"></div>
         </div>
         <div class="form-group">
           <label for="zip">Current Zip Code</label>
-          <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip">
+          <input name="zip" type="text" pattern="^\d{5}$" class="form-control" id="zip" placeholder="Zip" data-error="That does not look like a zip code..." required>
+          <div class="help-block with-errors"></div>
         </div>
 
 
-        <div class="checkbox">
-          <label>
-            <input name="have" type="checkbox"> Do you have the bill now?
-          </label>
-        </div>
+
         <div class="form-group">
-          <label for="note">How did you get this bill?</label>
-          <textarea class="form-control" name="note" placeholder="Got this at..." rows="3"></textarea>
+          <label for="note">How did you get this bill? <span>{{needchars}}</span></label>
+          <textarea class="form-control" pattern="^.{15}.+$" data-minlength="15" id="note" name="note" placeholder="Got this at..." rows="3" data-error="Tell us a quick note so we can keep a record and tweet it." required></textarea>
+          <div class="help-block with-errors"></div>
         </div>
 
         <br>

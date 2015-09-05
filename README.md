@@ -1,4 +1,4 @@
-# UndocuMoney Web App 
+# UndocuMoney Web App
 
 Inspired by the wheresgeorge.com site and merged with the #undocumoney campain idea.
 
@@ -40,5 +40,3 @@ TODO: Write history
 ## Credits
 
 - Celso Mireles: celso@digitalstrategy.tips
-
-[Support the developer, tips and donations welcome.](https://cash.me/$celsom3)

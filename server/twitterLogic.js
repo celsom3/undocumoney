@@ -5,7 +5,8 @@ Meteor.startup(function(){
 
       var cleanTweets = T.get('search/tweets', { q: '#undocumoney since:2015-08-27', count: 40, filter: 'images' }, Meteor.bindEnvironment(function(err, data, response) {
         if(!err){
-          console.log("Getting tweets...");
+          //console.log("Getting tweets...");
+          
           //console.log(response);
           // var statusText = data.statuses[1].text;
           // console.log(statusText);
