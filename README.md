@@ -1,6 +1,8 @@
 # UndocuMoney Web App
 
-Inspired by the wheresgeorge.com site and merged with the #undocumoney campain idea.
+##### This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+Inspired by the wheresgeorge.com site and merged with the #undocumoney campaign idea.
 
 The idea of #undocumoney is to highlight the U.S. economy's dependence on money that undocumented immigrants. Our money flows fluidly throughout economies.
 
