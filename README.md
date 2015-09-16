@@ -69,6 +69,6 @@ If you want to help with the development of this website email celso@digitalstra
 ## Credits
 
 - Celso Mireles, Developer: celso@digitalstrategy.tips
-- Marisol Soto, Idea Person, Spokeswoman: marisolsoto11@yahoo.com
+- Marisol Soto, Creator, Catalyst, Spokeswoman: marisolsoto11@yahoo.com
 - Irvin Camacho, Script Writer: Irvincamacho16@hotmail.com
 - Andrew Johnson, Videographer: venturestudios.ar@gmail.com
