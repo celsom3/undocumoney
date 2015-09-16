@@ -1,3 +1,31 @@
+# An Undocumoney Manifesto
+
+##### Money does NOT define us. We define ourselves. We define our own value.
+
+The undocumented immigrant is a power to be reckoned with in the U.S. But we, as an undocumented community, have yet to realize this truth.
+
+First of all, the simple act of existing affords us 'unalienable rights' as human beings. Unfortunately, and by design, the United States greets us with oppression as we seek liberation from US caused oppression in our home countries.
+
+We know the worth we bring to this country, and it goes beyond a marked dollar bill.
+
+We know we are the base of labor that sustains the United States. We are the hard work manifested into sweat from labor and thought.
+
+We may know this as individuals. But in order to make real change, we need to know this collectively. That is what #undocumoney strives to do.
+
+Exactly how much money do we contribute to this system? How much to we give to this country that dehumanizes us?
+
+We can only find out together.
+
+Let's reclaim our power. Let's reclaim our property that is our economic power. Let's reclaim the money that claims to own us.
+
+#### The first step is to let ourselves and the world know how much money goes through undocumented hands. Mark every bill with the hashtag #Undocumoney. Post it to Social Media.
+
+This is not to put a price on our value as people, but so that everyone knows how interwoven, and unextractable we are in the country. Without needing to assimilate, speak English, or want to be American, our money flows all around. We are here to stay.
+
+We are indispensable to the future and success of this country.
+
+Whether future and success of this capitalist system that oppresses us is something we want, we can decide later, once every undocumented immigrant realizes her/his power.
+
 # UndocuMoney Web App
 
 ##### This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
