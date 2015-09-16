@@ -62,9 +62,11 @@ If you want to help with the development of this website email celso@digitalstra
 ## Future features
 
 - Make site bilingual (English & Spanish)
+- Include Email verification into the user accounts
+- Email triggers on every action taken
 - Present the #undocumoney location history through interactive map
 - Allow people to upload media to go along with tweet
-- Create a tweet throttler so as not to overload the Twitter API from too many tweets
+- Create a tweet throttler
 
 ## Credits
 
