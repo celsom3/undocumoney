@@ -74,3 +74,5 @@ If you want to help with the development of this website email celso@digitalstra
 - Marisol Soto, Creator, Catalyst, Spokeswoman: marisolsoto11@yahoo.com
 - Irvin Camacho, Script Writer: Irvincamacho16@hotmail.com
 - Andrew Johnson, Videographer: venturestudios.ar@gmail.com
+
+![#undocumoney](https://dl.dropboxusercontent.com/u/16972085/undocumoney.jpg)
