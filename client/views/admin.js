@@ -4,7 +4,7 @@ Template.admin.helpers({
 
   },
   rendered: function(){
-
+    Session.set('totalUsers', 'Hi');
   },
   destroyed: function(){
 
@@ -28,10 +28,29 @@ Template.admin.helpers({
     return billsFound;
   },
   totalValue: function(){
-    return 3393;
+    var tValue = 0;
+
+    var billsList = bills.find().fetch();
+
+    for (var i = 0; i < billsList.length; i++){
+      var billValue = billsList[i].denomination;
+      tValue += parseInt(billValue);
+    }
+    return tValue;
   },
   totalParticipants: function(){
-    return 49;
+    var totalUsers = 0;
+
+    Meteor.call("getTotalUsers", function(err, data){
+      console.log(data);
+      if(err){
+        console.log(err);
+      }else{
+        Session.set('totalUsers', String(data));
+      }
+
+    });
+    return Session.get('totalUsers');
   }
 });
 
