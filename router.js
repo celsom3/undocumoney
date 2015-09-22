@@ -20,6 +20,10 @@ Router.map(function(){
     path: '/new-bill',
     layoutTemplate: 'profileLayout'
   });
+  this.route('admin', {
+    path: '/admin',
+    layoutTemplate: 'profileLayout'
+  });
 });
 
 var mustBeSignedIn = function() {
