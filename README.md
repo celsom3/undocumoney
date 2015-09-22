@@ -55,6 +55,8 @@ meteor
 
 That's it! You should now be able to see the site at localhost:3000.
 
+NOTE: You may get some errors in the console indicating that the Kadira, Analytics and Twit packages are not set up. Those details are kept confidential (not in the repo) and you can set up your own accounts for testing purposes.
+
 ## Contributing
 
 If you want to help with the development of this website email celso@digitalstrategy.tips. There may be some specifc features in the pipeline that you can help out with. Or you can just fork, clean up my code and send a pull request. :-)
