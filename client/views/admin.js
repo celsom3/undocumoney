@@ -4,7 +4,7 @@ Template.admin.helpers({
 
   },
   rendered: function(){
-    Session.set('totalUsers', 'Hi');
+    Session.set('totalUsers', '');
   },
   destroyed: function(){
 
