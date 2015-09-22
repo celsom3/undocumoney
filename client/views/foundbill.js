@@ -47,7 +47,8 @@ Template.foundbill.events({
       var tweet_note = note.slice(0,55) + '...';
 
       var tweet = tweet_note + ' Found at Zip Code ' + zip + '. Register your #undocumoney at http://undocumoney.com!';
-      Meteor.call('tweet_out', tweet);
+
+      //Meteor.call('tweet_out', tweet);
 
 
       e.target.serialnumber.value = '';
