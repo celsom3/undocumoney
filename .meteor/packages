@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 insecure
 twbs:bootstrap
 accounts-base
@@ -16,3 +15,17 @@ reactive-var
 mrt:twit
 okgrow:iron-router-autoscroll
 okgrow:analytics
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+standard-minifier-css
+standard-minifier-js
