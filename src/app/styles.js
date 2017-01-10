@@ -10,9 +10,9 @@ const styles = {
     page: {
         flex: '1',
         width: '100%',
-        maxWidth: '800px',
-        margin: '0px auto 20px auto',
-        padding: '2.8rem',
+        // maxWidth: '800px',
+        margin: '0px',
+        padding: '0px',
         backgroundColor: '#fff',
         zIndex: '1'
     },
