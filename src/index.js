@@ -9,6 +9,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import configureStore from './configureStore';
 
 import App from './app/App.js';
+import Home from './home/Home.js';
 
 
 import { logPageView } from './helpers/analytics';
@@ -25,14 +26,14 @@ const history = syncHistoryWithStore(browserHistory, store);
 ReactDOM.render(
 	<Provider store={store} >
 
-			<Router
-				history={history}
-				onUpdate={logPageView}
-				>
-				<Route path="/" component={App} />
+			<Router history={history} onUpdate={logPageView} >
+				
+				<Route component={App} >
+					<Route path="/" component={Home} />
+				</Route>
 
 			</Router>
-	
+
 	</Provider>
 
 	, document.getElementById('app'));
