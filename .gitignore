@@ -1,7 +1,0 @@
-node_modules
-npm-debug.log
-npm-debug.log*
-*.swp
-*.DS_Store
-.env
-client/
