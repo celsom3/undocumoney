@@ -59,7 +59,7 @@ NOTE: You may get some errors in the console indicating that the Kadira, Analyti
 
 ## Contributing
 
-If you want to help with the development of this website email celso@digitalstrategy.tips. There may be some specifc features in the pipeline that you can help out with. Or you can just fork, clean up my code and send a pull request. :-)
+If you want to help with the development of this website email celso@pocholabs.com. There may be some specifc features in the pipeline that you can help out with. Or you can just fork, clean up my code and send a pull request. :-)
 
 ## Future features
 
@@ -72,7 +72,7 @@ If you want to help with the development of this website email celso@digitalstra
 
 ## Credits
 
-- Celso Mireles, Developer: celso@digitalstrategy.tips
+- Celso Mireles, Developer: celso@pocholabs.com
 - Marisol Soto, Creator, Catalyst, Spokeswoman: marisolsoto11@yahoo.com
 - Irvin Camacho, Script Writer: Irvincamacho16@hotmail.com
 - Andrew Johnson, Videographer: venturestudios.ar@gmail.com
