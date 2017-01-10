@@ -1,0 +1,20 @@
+$red: #fe3737;
+$white: #fff;
+
+.appBar {
+  background-color: $red;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	clear: both;
+	width: 100%;
+
+  > svg {
+    width: 8rem;
+    height: 4rem;
+    margin-right: 1rem;
+    fill: $white;
+    margin: 0px auto;
+    text-align: center;
+  }
+}
