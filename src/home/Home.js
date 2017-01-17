@@ -10,7 +10,6 @@ import {
 	Snackbar
 } from 'react-toolbox';
 
-
 class Home extends Component {
 	componentWillMount() {
 
@@ -21,11 +20,11 @@ class Home extends Component {
 
 		return (
       <div>
-        <header>
+        <header id="home" style={{height:'100vh', position: 'absolute', top: '0px', clear: 'both', width: '100%'}}>
           <div className="container">
               <div className="intro-text">
                   <div className="intro-video embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mII9NZ8MMVM" frameBorder="0" allowFullScreen></iframe>
+                    <iframe width="560" height="315" style={{width:'100%', height: '70vh', minHeight: '315px'}} src="https://www.youtube.com/embed/ftGCb8tpT-8" frameBorder="0" allowFullScreen></iframe>
                   </div>
 
                   <a href="#services" className="tell-more page-scroll btn btn-xl">Tell Me More</a>
