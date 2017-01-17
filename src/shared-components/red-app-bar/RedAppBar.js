@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { AppBar } from 'react-toolbox/lib/app_bar';
+import { Button } from 'react-toolbox';
 import Logo from './Logo.js';
 import theme from './RedAppBar.scss';
 import { Link } from 'react-router';
@@ -26,7 +27,15 @@ class RedAppBar extends Component {
     return (
       <AppBar {...other} theme={theme}>
         {children}
-        <a href="#" style={style} onClick={this.onClick.bind(this)}><Logo /></a>
+        <a href="#" onClick={this.onClick.bind(this)}><Logo /></a>
+        <div style={{width: '100%'}}>
+          <Button style={{float: 'right', color: '#fff', fontFamily: 'Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif',
+    fontWeight: '400'}} label='Campaign' flat primary />
+  <Button style={{float: 'right', color: '#fff', fontFamily: 'Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif',
+    fontWeight: '400'}} label='Stories' flat primary />
+  <Button style={{float: 'right', color: '#fff', fontFamily: 'Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif',
+    fontWeight: '400'}} label='Participate' flat primary />
+        </div>
       </AppBar>
     );
   }
